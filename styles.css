@@ -39,7 +39,7 @@ header {
     font-weight: 700;
     font-size: 1.125rem;
     line-height: 1.5rem;
-
+    
     display: flex;
     justify-content: start;
     align-items: center;
@@ -75,4 +75,20 @@ main p:last-child {
 
 ::selection {
     background-color: #C6E6FF;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0; /* Start invisible */
+    animation: fadeInUp 1.2s ease-out forwards;
 }
