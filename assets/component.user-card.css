@@ -1,0 +1,28 @@
+.user-card {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.user-card .name {
+    font-weight: 700;
+    font-size: 1.125rem;
+    /*line-height: 1.5rem;*/
+    margin-bottom: 0;
+}
+
+.user-card .bio {
+    /*font-weight: 700;*/
+    font-size: 1rem;
+    line-height: 1.125rem;
+    margin-top: 0;
+}
+
+.user-card .avatar {
+    width: 62px; /* Adjust as needed */
+    height: 62px; /* Ensure it's a square */
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover; /* Ensures the image fills the shape without distortion */
+    display: block;
+    margin: 0 auto 0.5rem auto;
+}

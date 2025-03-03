@@ -21,9 +21,9 @@
 }
 
 .nav a:hover {
-    color: #0000EE;
+    color: #0077cc;
 }
 
 .nav a:hover svg path {
-    fill: #0000EE;
+    fill: #0077cc;
 }
