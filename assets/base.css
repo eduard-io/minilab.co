@@ -9,7 +9,7 @@
 }
 
 html {
-    font-size: 16px; // To use with REMs (Root EMs)
+    font-size: 16px; /* To use with REMs (Root EMs) */
     /*background-color: $color-highlight;*/
   
     -moz-osx-font-smoothing: grayscale;
