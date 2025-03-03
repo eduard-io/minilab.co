@@ -4,9 +4,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #FDFDFD;
-    color: #333333;
-    font-family: Times, serif;
     padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
 

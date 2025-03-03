@@ -8,11 +8,30 @@
     background-color: #C6E6FF;
 }
 
+html {
+    font-size: 16px; // To use with REMs (Root EMs)
+    /*background-color: $color-highlight;*/
+  
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: #FDFDFD;
+    color: #333333;
+    font-family: Times, serif;
+}
+
 a {
     color: #0000EE;
     text-decoration: none;
 }
 
+u {
+    text-decoration-thickness: from-font;
+}
+
 a:hover {
     text-decoration: underline;
+    text-decoration-thickness: from-font;
 }
