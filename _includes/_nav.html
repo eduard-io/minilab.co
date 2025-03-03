@@ -1,3 +1,6 @@
-<header>
+<header class="nav">
     <a href="https://minilab.co">{% include '_logo.svg' %} minilab.co </a>
+    {% if user %}
+        <a href="https://minilab.co/{{ user }}">/{{ user }} </a>
+    {% endif %}
 </header>

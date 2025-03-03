@@ -21,19 +21,21 @@ body {
     background-color: #FDFDFD;
     color: #333333;
     font-family: Times, serif;
-    font-size: 1.5rem; /* Default size for mobile */
     padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
     /* Larger size for desktop */
     body {
-        font-size: 3rem;
         padding: 1.5rem 5rem 5rem 5rem;
+    }
+    
+    .home {
+        font-size: 3rem;
     }
 }
 
-header {
+.nav {
     /*padding: 2rem;*/
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-weight: 700;
@@ -43,11 +45,11 @@ header {
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 4px;
+    /*gap: 4px;*/
     align-self: stretch;
 }
 
-header a {
+.nav a {
     display: flex;
     align-items: center;
     gap: 0.25rem;
@@ -55,21 +57,19 @@ header a {
     text-decoration: none;
 }
 
-header a:hover {
+.nav a:hover {
     color: #0000EE;
 }
 
-header a:hover svg path {
+.nav a:hover svg path {
     fill: #0000EE;
 }
 
-main { }
-
-main p {
+.home p {
     margin-bottom: 2rem;
 }
 
-main p:last-child {
+.home p:last-child {
     margin-bottom: 0;
 }
 
@@ -91,4 +91,13 @@ main p:last-child {
 .fade-in-up {
     opacity: 0; /* Start invisible */
     animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.user-page {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.align--center {
+    text-align: center;
 }
