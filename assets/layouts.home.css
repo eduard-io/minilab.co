@@ -1,0 +1,27 @@
+.l-home {
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FDFDFD;
+    color: #333333;
+    font-family: Times, serif;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    /* Larger size for desktop */
+    .l-home {
+        padding: 1.5rem 5rem 5rem 5rem;
+        font-size: 3rem;
+    }
+}
+
+.l-home p {
+    margin-bottom: 2rem;
+}
+
+.l-home p:last-child {
+    margin-bottom: 0;
+}

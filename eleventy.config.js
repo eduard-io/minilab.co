@@ -1,3 +1,3 @@
 export default function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("styles.css");
+  eleventyConfig.addWatchTarget("./assets/"); // Watch /assets for changes
 };
