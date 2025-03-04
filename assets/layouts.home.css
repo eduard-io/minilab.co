@@ -12,6 +12,15 @@
     line-height: 1.3;
 }
 
+.l-home p {
+    margin-bottom: 1.5rem;
+    margin-top: 0rem;
+}
+
+.l-home p:last-child {
+    margin-bottom: 0;
+}
+
 @media screen and (min-width: 768px) {
     /* Larger size for desktop */
     .l-home {
@@ -20,14 +29,8 @@
 
     .l-home p {
         font-size: 3rem;
-        line-height: 1.125;
+        line-height: 1.25;
+        margin-bottom: 3rem;
     }
 }
 
-.l-home p {
-    margin-bottom: 2rem!;
-}
-
-.l-home p:last-child {
-    margin-bottom: 0;
-}
