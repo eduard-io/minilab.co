@@ -27,9 +27,12 @@ body {
 }
 
 u {
-    text-decoration-thickness: from-font;
+    text-decoration-thickness: 1px;
 }
 
+strong {
+    font-weight: 700;
+}
 
 a {
     color: #0077cc;
@@ -44,9 +47,14 @@ a:hover {
     text-decoration-thickness: from-font;
 }
 
-a:focus {
-    outline: 2px solid #0077cc;
+a:focus-visible {
+    /*outline: 2px solid #0077cc;
+    outline-offset: 2px;*/
+
+    outline: 2px solid #0070f3; /* Visible focus ring */
     outline-offset: 2px;
+    border-color: #0070f3; /* Change border color on focus */
+    background-color: rgba(0, 112, 243, 0.1);
 }
 
 h1, h2, h3, h4, h5, h6 {
