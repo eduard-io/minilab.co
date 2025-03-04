@@ -1,6 +1,13 @@
 <header class="nav">
-    <a href="https://minilab.co">{% include '_logo.svg' %} minilab.co </a>
-    {% if path %}
-        <a href="https://minilab.co/{{ path }}">/{{ path }} </a>
-    {% endif %}
+    <a href="/">{% include '_logo.svg' %} minilab.co </a>
+    
+    {% assign pathParts = page.url | split: "/" %}
+    {% capture pathSoFar %}{% endcapture %}
+  
+    {% for part in pathParts %}
+      {% if part != "" and part != "index.html" %}
+        {% assign pathSoFar = pathSoFar | append: "/" | append: part %}
+        / <a href="{{ pathSoFar }}/">{{ part }}</a>
+      {% endif %}
+    {% endfor %}
 </header>
