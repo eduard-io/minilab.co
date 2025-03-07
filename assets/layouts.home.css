@@ -5,16 +5,14 @@
     flex-direction: column;
     justify-content: space-between;
     
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 .l-home p {
-    line-height: 1.3;
-}
-
-.l-home p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     margin-top: 0rem;
+    font-size: 4vw;
+    line-height: 1.4;
 }
 
 .l-home p:last-child {
@@ -24,13 +22,24 @@
 @media screen and (min-width: 768px) {
     /* Larger size for desktop */
     .l-home {
-        padding: 1.5rem 5rem 5rem 5rem;
+        padding: 2rem 2rem 5rem 2rem;
     }
 
     .l-home p {
-        font-size: 3rem;
-        line-height: 1.25;
-        margin-bottom: 3rem;
+        /*font-size: 6vw;*/
+        /*line-height: 1.25;*/
+        /*margin-bottom: 4vw;*/
     }
 }
 
+@media only screen and (min-width: 1920px) {
+    /* Very larger displays */
+    .l-home main {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    .l-home p {
+        font-size: 5rem;
+    }
+}
