@@ -20,5 +20,9 @@
   "homepage": "https://github.com/eduard-io/minilab.co#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
   }
 }
