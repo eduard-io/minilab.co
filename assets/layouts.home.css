@@ -9,9 +9,9 @@
 }
 
 .l-home p {
-    margin-bottom: 2rem;
+    margin-bottom: 4vw;
     margin-top: 0rem;
-    font-size: 4vw;
+    font-size: 1.5rem;
     line-height: 1.4;
 }
 
@@ -19,16 +19,26 @@
     margin-bottom: 0;
 }
 
+@media only screen and (min-width: 600px) {
+    /* Styles that apply only to screens 
+       600px wide or more */
+       .l-home p {
+        /*font-size: 4vw;*/
+        font-size: 4vw;
+        margin-bottom: 4vw;
+    }
+  }
+  
+/* Larger size for desktop */
 @media screen and (min-width: 768px) {
-    /* Larger size for desktop */
+
     .l-home {
         padding: 2rem 2rem 5rem 2rem;
     }
 
     .l-home p {
-        /*font-size: 6vw;*/
-        /*line-height: 1.25;*/
-        /*margin-bottom: 4vw;*/
+        margin-bottom: 3vw;
+        font-size: 3vw;
     }
 }
 
