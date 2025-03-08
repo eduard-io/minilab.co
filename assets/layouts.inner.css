@@ -1,12 +1,12 @@
 .l-inner {
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 @media screen and (min-width: 768px) {
     /* Larger size for desktop */
-    .l-inner {
+    /*.l-inner {
         padding: 1.5rem 5rem 5rem 5rem;
-    }
+    }*/
 }
 
 .l-inner main {

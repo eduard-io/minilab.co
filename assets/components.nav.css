@@ -1,6 +1,6 @@
 .nav {
     /*padding: 2rem;*/
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: var(--font-family-sans);
     font-weight: 700;
     font-size: 1.125rem;
     line-height: 1.5rem;
