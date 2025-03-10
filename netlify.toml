@@ -1,0 +1,17 @@
+# netlify.toml
+
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+# Optional: Netlify dev configuration
+#[dev]
+#  command = "npx @11ty/eleventy --serve"
+#  port = 8888
+#  targetPort = 8080
+
+# Example redirects (remove or customize if not needed)
+#[[redirects]]
+#  from = "/*"
+#  to = "/index.html"
+#  status = 200
