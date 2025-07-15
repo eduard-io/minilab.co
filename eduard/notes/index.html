@@ -1,0 +1,11 @@
+---
+title: minilab.co/eduard
+layout: inner.html
+---
+
+<section>
+  <h2>All Notes</h2>
+    {% for note in collections.notes %}
+      {% include "clickable-article.liquid", note: note %}
+    {% endfor %}
+</section>

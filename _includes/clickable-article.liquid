@@ -1,0 +1,12 @@
+<article class="clickable-article"  data-href="{{ note.url }}">
+    <p class="date">{{ note.date | readableDate  }}</p>
+    <h3 class="align--center">{{ note.data.title }}</h3>
+    
+    {% if note.data.excerpt %}
+        <p>{{ note.data.excerpt }}</p>
+    {% else %}
+        <p>{{ note.templateContent | excerpt: 200 }}</p>
+    {% endif %}
+
+    <a href="{{ note.url }}" class="button">Read More</a>
+</article>

@@ -1,0 +1,13 @@
+---
+title: minilab.co/eduard
+layout: inner.html
+---
+
+<section class="latest-notes">
+  <h2>Latest Notes</h2>
+    {% for note in collections.notes | slice: 0, 5 %}
+      {% include "clickable-article.liquid", note: note %}
+    {% endfor %}
+
+  <p><a href="/eduard/notes/" class="button see-all-notes">See all notes →</a></p>
+</section>

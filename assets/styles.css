@@ -5,3 +5,55 @@
     color: #5B5B5B;
     margin-bottom: 0.5rem;
 }
+
+.clickable-article {
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-radius: 0.5rem; /* Rounded corners */
+    cursor: pointer; /* Indicates clickability */
+    transition: box-shadow 0.2s ease-in-out; /* Smooth shadow transition */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center button horizontally */
+    /*text-align: center; */
+}
+
+.clickable-article:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Light shadow on hover */
+    background-color: #fbfbfb;
+
+}
+
+
+
+
+.button {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    border: 1px solid #ccc; /* Adjust to match your existing colors */
+    border-radius: 999px; /* Rounded corners */
+    font-size: 0.9rem; /* Match your text size */
+    color: inherit; /* Use the same text color as the surrounding text */
+    text-decoration: none; /* Remove underline */
+    font-family: var(--font-family-sans);
+    font-weight: 700;
+    transition: all 0.2s ease-in-out; /* Smooth transition effect */
+    color: #444;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.025); /* Subtle hover effect */
+    border-color: #666; /* Slightly darker border on hover */
+    color: #fff;
+    background-color: #333;
+}
+
+
+.latest-notes {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center button horizontally */
+    /*text-align: center; */
+    gap: 1rem;
+}
