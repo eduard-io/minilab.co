@@ -1,29 +1,29 @@
 .nav {
-    /*padding: 2rem;*/
-    font-family: var(--font-family-sans);
-    font-weight: 700;
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-    
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    /*gap: 4px;*/
-    align-self: stretch;
+  /*padding: 2rem;*/
+  font-family: var(--font-family-sans);
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  /*gap: 4px;*/
+  align-self: stretch;
 }
 
 .nav a {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    color: #333333;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #333333;
+  text-decoration: none;
 }
 
 .nav a:hover {
-    color: #0077cc;
+  color: #0077cc;
 }
 
 .nav a:hover svg path {
-    fill: #0077cc;
+  fill: #0077cc;
 }

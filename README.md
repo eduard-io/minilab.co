@@ -6,8 +6,7 @@ Designed in Figma, built in HTML and CSS in Visual Studio Code & Cursor by Eduar
 
 ## Content License
 
-All content on this site (notes, articles, and blog posts) is licensed under 
+All content on this site (notes, articles, and blog posts) is licensed under
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) unless otherwise noted.
 
 © 2025 Eduard Giménez
-
