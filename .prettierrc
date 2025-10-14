@@ -1,0 +1,14 @@
+{
+  "printWidth": 100,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "plugins": ["prettier-plugin-jinja-template"],
+  "overrides": [
+	{
+	  "files": ["**/*.njk", "**/*.nunj", "**/*.jinja", "**/*.html"],
+	  "options": {
+		"parser": "jinja-template"
+	  }
+	}
+  ]
+}
