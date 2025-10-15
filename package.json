@@ -9,7 +9,8 @@
     "serve": "eleventy --serve",
     "clean": "rm -rf _site",
     "fmt": "prettier -w .",
-    "fmt:check": "prettier -c ."
+    "fmt:check": "prettier -c .",
+    "css:clean": "cleancss -o public/stylesheets/tufte.min.css public/stylesheets/tufte.css"
   },
   "repository": {
     "type": "git",
