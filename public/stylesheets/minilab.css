@@ -1,9 +1,9 @@
 /* ============ Root & Theme ============ */
 :root {
   /* Typography */
-  --font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-				  Roboto, "Helvetica Neue", Arial, "Apple Color Emoji",
-				  "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --font-family-var: InterVariable;
 
   /* Rhythm: tie spacing to body line-height (approx 1.5 × font-size) */
@@ -15,41 +15,74 @@
   --color-rule: #d0d7de;
   --color-selection-bg: #fff59e; /* gentle highlighter */
   --color-selection-fg: #111;
-  --color-link-hover: #0057FF;
+  --color-link-hover: #0057ff;
 }
 
 /* Prefer variable font if supported */
 @supports (font-variation-settings: normal) {
-  :root { --font-family: var(--font-family-var), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+  :root {
+    --font-family:
+      var(--font-family-var), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+      'Helvetica Neue', Arial;
+  }
 }
 
 /* Dark theme scaffold */
 @media (prefers-color-scheme: dark) {
   :root {
-	--color-background: #0f1115;
-	--color-text: #e6e8eb;
-	--color-rule: #2a2e35;
-	--color-selection-bg: #665c00;
-	--color-selection-fg: #fffbe6;
-    --color-link-hover: #4D8DFF;
+    /* Colors (Dark) */
+    --color-background: #202021;
+    --color-text: #e6e8eb;
+    --color-rule: #2a2e35;
+    --color-selection-bg: #665c00;
+    --color-selection-fg: #fffbe6;
+    --color-link-hover: #4d8dff;
   }
 }
 
-/* ============ Base ============ */
 html {
-  -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
 }
 
-*, *::before, *::after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-html, body {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
+} */
 
 ::selection {
   background: var(--color-selection-bg);
@@ -61,17 +94,18 @@ body {
   flex-direction: column;
   min-height: 100vh; /* full viewport height */
   padding: 1rem 1rem 0 1rem;
-  
+
   color: var(--color-text);
   background: var(--color-background);
   font-family: var(--font-family), sans-serif;
-  font-feature-settings: "liga" 1, "calt" 1;
+  font-feature-settings:
+    'liga' 1,
+    'calt' 1;
   font-synthesis: none;
   font-size: 100%;
   line-height: 1.5;
   overflow-wrap: break-word;
 }
-
 
 /* Main content stays centered and readable */
 main {
@@ -91,7 +125,7 @@ article {
 /* ============ Headings ============ */
 :where(h1, h2, h3) {
   font-weight: 700;
-  line-height: 1.2;              /* unitless; better for multi-line */
+  line-height: 1.2; /* unitless; better for multi-line */
   color: var(--color-text);
   margin-block-end: var(--rhythm);
 }
@@ -108,7 +142,7 @@ h1:has(+ .subtitle) {
 h2 {
   font-size: clamp(1.75rem, 3.5vw, 2rem);
   margin-block-start: calc(var(--rhythm) * 2.5);
-  font-style: italic;            /* keep your style choice */
+  font-style: italic; /* keep your style choice */
 }
 
 h3 {
@@ -118,12 +152,17 @@ h3 {
 }
 
 /* Extra breathing room when a heading follows a paragraph */
-p + h2 { margin-block-start: calc(var(--rhythm) * 2.25); }
-p + h3 { margin-block-start: calc(var(--rhythm) * 2); }
+p + h2 {
+  margin-block-start: calc(var(--rhythm) * 2.25);
+}
+p + h3 {
+  margin-block-start: calc(var(--rhythm) * 2);
+}
 
 /* ============ Text ============ */
-p { margin-block-end: var(--rhythm); }
-
+p {
+  margin-block-end: var(--rhythm);
+}
 
 .subtitle {
   font-size: 1.2rem;
@@ -134,7 +173,9 @@ p { margin-block-end: var(--rhythm); }
   margin-block-end: 1.5rem;
 }
 /* Optional: consistent spacing for common blocks */
-:where(ul, ol, pre, blockquote, figure) { margin-block: var(--rhythm); }
+:where(ul, ol, pre, blockquote, figure) {
+  margin-block: var(--rhythm);
+}
 
 /* ============ Rules ============ */
 hr {
@@ -158,20 +199,26 @@ a:hover {
 }
 
 /* ============ Long words / code safety ============ */
-:where(code, kbd, samp) { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
-pre { overflow: auto; }
+:where(code, kbd, samp) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+}
+pre {
+  overflow: auto;
+}
 
 /* Optional: tighten whitespace around top-of-page headings */
-body > :first-child { margin-block-start: 0; }
+body > :first-child {
+  margin-block-start: 0;
+}
 
 /* ============ Header & Footer ============ */
 header,
 footer {
   display: flex;
-  justify-content: space-between;  /* push items to edges */
-  align-items: center;             /* vertical centering */
-  flex-wrap: wrap;                 /* allows wrapping on small screens */
-  
+  justify-content: space-between; /* push items to edges */
+  align-items: center; /* vertical centering */
+  flex-wrap: wrap; /* allows wrapping on small screens */
+
   width: 100%;
   padding: 0.8rem 1rem;
   /*padding: 8px 12px;*/
@@ -179,10 +226,9 @@ footer {
   font-size: 0.875rem;
   background: rgba(243, 243, 241, 0.9);
   border-radius: 0.5rem;
-  
+
   /*border-top: 1px solid rgba(0,0,0,0.1); /* subtle separator */
 }
-
 
 header a.logo,
 footer a.logo {
@@ -198,5 +244,5 @@ footer p {
 /* Footer styles … */
 
 .end-gap {
-  flex: 0 0 1rem;   /* exactly 1rem of space after the footer */
+  flex: 0 0 1rem; /* exactly 1rem of space after the footer */
 }

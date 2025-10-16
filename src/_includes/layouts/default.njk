@@ -13,26 +13,35 @@
       data-website-id="e28f437c-7e92-4049-a866-5bcbb4580d8d"
     ></script>
 
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <!-- <link rel="stylesheet" href="/stylesheets/normalize.css"/> -->
-    <link rel="stylesheet" href="/stylesheets/minilab.css"/>
+    <link rel="stylesheet" href="/stylesheets/new.css" />
   </head>
 
   <body>
-    <header><a class="logo" href="/">minilab.co</a></header>
-    
-    <main>  
+    <header>
+      <p><strong>minilab.co</strong></p>
+      <nav>
+        <a href="/">Home</a> • <a href="/now/">Now</a> • <a href="/colophon/">Colophon</a>• <a href="/changelog/">Changelog</a>
+        <!-- /
+        <a href="https://newcss.net/usage/elements/">Elements</a> /
+        <a href="https://newcss.net/themes/">Themes</a> /
+        <a href="https://github.com/xz/new.css">GitHub</a> /
+        <a href="https://discord.gg/hhuuC4w">Discord</a> -->
+      </nav>
+    </header>
+
+    <main>
       <article>
         <h1>{{ title }}</h1>
-        <p class="subtitle">{{ subtitle }}</p>
         {{ content | safe }}
       </article>
     </main>
-    
+
     <footer>
-      <p>&copy; 2025 <a class="logo" href="/">minilab.co</a>. All rights reserved.</p>    
-      <p>Last updated on October 2025</p>
+      <p>&copy; 2025 <a class="logo" href="/">minilab.co</a>. All rights reserved.</p>
+      <p>Last updated on <a href="/changelog">October 2025</p>
     </footer>
     <div class="end-gap" aria-hidden="true"></div>
   </body>

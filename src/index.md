@@ -1,15 +1,18 @@
 ---
-title: minilab.co
-subtitle: A quiet place
+title: Welcome to the minilab
 layout: layouts/default
 ---
 
-A small site to share ideas, notes and experiments by [Eduard Giménez](https://eduard.io). Searching for the DIY spirit in a dead internet.
+A tiny lab on the internet. An independent initiative for small services,
+experiments, and ideas.
 
-The minilab is always under construction.
+Run by [Eduard Giménez](https://eduard.io). the only member, for now.
 
-## Colophon
+The lab is never finished.
 
-The minilab is built by hand on [Nova](https://nova.app), using [new.css](https://newcss.net/usage), [Inter](https://rsms.me/inter/) and, [11ty](https://www.11ty.dev) to build the site.
+## Sitemap
 
-Hosted on [Netlify](https://www.netlify.com).
+- [Home](/): _you're here._
+- [Now](/now): what's happening now in the minilab
+- [Colophon](/colophon): information of how the minilab is built
+- [Changelog](/changelog): record of changes
