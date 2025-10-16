@@ -16,9 +16,3 @@ The minilab is always under construction.
 The minilab is built by hand on [Nova](https://nova.app), using [new.css](https://newcss.net/usage), [Inter](https://rsms.me/inter/) and, [11ty](https://www.11ty.dev) to build the site.
 
 Hosted on [Netlify](https://www.netlify.com).
-
-Last updated on October 2025.
-
-## Another
-### And three
-This is just for testing

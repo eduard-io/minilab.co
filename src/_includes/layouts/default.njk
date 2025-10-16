@@ -15,13 +15,20 @@
 
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link rel="stylesheet" href="/stylesheets/type.css">
-    <link rel="stylesheet" href="/stylesheets/normalize.css"/>
+    <!-- <link rel="stylesheet" href="/stylesheets/normalize.css"/> -->
     <link rel="stylesheet" href="/stylesheets/minilab.css"/>
   </head>
 
   <body>
-    <!-- <header>Welcome</header> -->
-    <article>{{ content | safe }}</article>
+    <header><a class="logo" href="/">minilab.co</a></header>
+    
+    <main>
+      <article>{{ content | safe }}</article>
+    </main>
+    
+    <footer>
+      <p>&copy; 2025 <a class="logo" href="/">minilab.co</a>. All rights reserved.</p>    
+      <p>Last updated on October 2025</p>
+    </footer>
   </body>
 </html>

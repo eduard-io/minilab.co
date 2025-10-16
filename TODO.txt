@@ -1,0 +1,4 @@
+- Add header
+- Add footer
+- Review CSS styles
+- Add first user

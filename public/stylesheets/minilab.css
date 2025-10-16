@@ -38,6 +38,17 @@
 /* ============ Base ============ */
 html {
   -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 ::selection {
@@ -46,19 +57,34 @@ html {
 }
 
 body {
-  margin: 0 auto;
-  max-width: 68ch;               /* good measure for reading */
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+  padding: 1rem;
+  
   color: var(--color-text);
   background: var(--color-background);
-
   font-family: var(--font-family), sans-serif;
-  font-feature-settings: "liga" 1, "calt" 1; /* Chrome workaround */
+  font-feature-settings: "liga" 1, "calt" 1;
   font-synthesis: none;
-
   font-size: 100%;
   line-height: 1.5;
-  overflow-wrap: break-word;     /* modern word wrapping */
+  overflow-wrap: break-word;
+}
+
+/* Main content stays centered and readable */
+main {
+  flex: 1; /* fills remaining vertical space between header/footer */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 68ch;
+  padding: 2rem;
+}
+
+/* Optional: narrower inner sections within article */
+article {
+  margin: 0 auto;
+  max-width: 68ch;
 }
 
 /* ============ Headings ============ */
@@ -123,3 +149,33 @@ pre { overflow: auto; }
 
 /* Optional: tighten whitespace around top-of-page headings */
 body > :first-child { margin-block-start: 0; }
+
+/* ============ Header & Footer ============ */
+header,
+footer {
+  display: flex;
+  justify-content: space-between;  /* push items to edges */
+  align-items: center;             /* vertical centering */
+  flex-wrap: wrap;                 /* allows wrapping on small screens */
+  
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  /*padding: 8px 12px;*/
+  background: var(--color-background);
+  font-size: 0.875rem;
+  background: rgba(243, 243, 241, 0.9);
+  border-radius: 0.5rem;
+  
+  /*border-top: 1px solid rgba(0,0,0,0.1); /* subtle separator */
+}
+
+header a.logo,
+footer a.logo {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header p,
+footer p {
+  margin: 0;
+}
