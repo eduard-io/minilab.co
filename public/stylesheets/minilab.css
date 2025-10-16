@@ -60,7 +60,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* full viewport height */
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   
   color: var(--color-text);
   background: var(--color-background);
@@ -71,6 +71,7 @@ body {
   line-height: 1.5;
   overflow-wrap: break-word;
 }
+
 
 /* Main content stays centered and readable */
 main {
@@ -100,6 +101,10 @@ h1 {
   margin-block-start: calc(var(--rhythm) * 3);
 }
 
+h1:has(+ .subtitle) {
+  margin-block-end: 0.1em; /* tighten spacing only if subtitle follows */
+}
+
 h2 {
   font-size: clamp(1.75rem, 3.5vw, 2rem);
   margin-block-start: calc(var(--rhythm) * 2.5);
@@ -119,6 +124,15 @@ p + h3 { margin-block-start: calc(var(--rhythm) * 2); }
 /* ============ Text ============ */
 p { margin-block-end: var(--rhythm); }
 
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text-secondary, #555);
+  margin-block-start: 0em;
+  margin-block-end: 1.5rem;
+}
 /* Optional: consistent spacing for common blocks */
 :where(ul, ol, pre, blockquote, figure) { margin-block: var(--rhythm); }
 
@@ -159,7 +173,7 @@ footer {
   flex-wrap: wrap;                 /* allows wrapping on small screens */
   
   width: 100%;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 1rem;
   /*padding: 8px 12px;*/
   background: var(--color-background);
   font-size: 0.875rem;
@@ -168,6 +182,7 @@ footer {
   
   /*border-top: 1px solid rgba(0,0,0,0.1); /* subtle separator */
 }
+
 
 header a.logo,
 footer a.logo {
@@ -178,4 +193,10 @@ footer a.logo {
 header p,
 footer p {
   margin: 0;
+}
+
+/* Footer styles … */
+
+.end-gap {
+  flex: 0 0 1rem;   /* exactly 1rem of space after the footer */
 }

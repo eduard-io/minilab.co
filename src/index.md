@@ -1,11 +1,8 @@
 ---
 title: minilab.co
+subtitle: A quiet place
 layout: layouts/default
 ---
-
-# Minilab
-
-_A quiet place_
 
 A small site to share ideas, notes and experiments by [Eduard Giménez](https://eduard.io). Searching for the DIY spirit in a dead internet.
 

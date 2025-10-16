@@ -22,13 +22,18 @@
   <body>
     <header><a class="logo" href="/">minilab.co</a></header>
     
-    <main>
-      <article>{{ content | safe }}</article>
+    <main>  
+      <article>
+        <h1>{{ title }}</h1>
+        <p class="subtitle">{{ subtitle }}</p>
+        {{ content | safe }}
+      </article>
     </main>
     
     <footer>
       <p>&copy; 2025 <a class="logo" href="/">minilab.co</a>. All rights reserved.</p>    
       <p>Last updated on October 2025</p>
     </footer>
+    <div class="end-gap" aria-hidden="true"></div>
   </body>
 </html>
