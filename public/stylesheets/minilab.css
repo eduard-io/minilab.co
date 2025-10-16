@@ -66,23 +66,21 @@ h1, h2, h3 {
   /* color: var(--color-text); */
   font-weight: 700;
   line-height: calc(var(--rhythm) * 0.8333333333);
-  margin-bottom: calc(var(--rhythm) * 0.9);
+  margin-bottom: var(--rhythm);
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   margin-top: calc(var(--rhythm) * 3);
 }
 
 h2 {
-  font-style: italic;
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-top: calc(var(--rhythm) * 2.5);
 }
 
 h3 {
-  font-style: italic;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin-top: calc(var(--rhythm) * 2);
 }
 
@@ -96,11 +94,5 @@ p {
 hr {
   border: none;
   border-top: 1px solid #ccc;
-  margin: calc(var(--rhythm) * 1.2) 0;
-}
-
-/* Optional: tighter rhythm for consecutive elements */
-p + h2,
-p + h3 {
-  margin-top: calc(var(--rhythm) * 2.2);
+  margin: calc(var(--rhythm) * 1.5) 0;
 }
