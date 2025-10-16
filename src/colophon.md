@@ -3,6 +3,8 @@ title: Colophon
 layout: layouts/default
 ---
 
+# Colophon
+
 The minilab is a static site built using [11ty](https://www.11ty.dev) and hosted
 on [Netlify](https://www.netlify.com). It's built by hand with
 [Nova](https://nova.app) with some minor assistance from AI. You can check the

@@ -7,16 +7,16 @@
     Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
 
   /* Light theme */
-  --color-text-heading: #1f262b;
-  --color-text-body: #1a1a1a;
+  --color-text-heading: #333;
+  --color-text-body: #444;
   --color-background: #fdfdfd;
   --color-surface: #f6f8fa;
   --color-border: #e5e7eb;
   --color-link: #0070f3;
   --color-link-hover: #0366d6;
   --color-link-text: #ffffff;
-  --color-accent: #79ffe1;
-  --color-accent-text: #0c4047;
+  --color-accent: rgba(251, 255, 122, 0.776);
+  --color-accent-text: #444;
 
   /* Dark theme */
   --color-dark-text-heading: #e6e8eb;
@@ -27,11 +27,11 @@
   --color-dark-link: #3291ff;
   --color-dark-link-hover: #0070f3;
   --color-dark-link-text: #ffffff;
-  --color-dark-accent: #f7ff00;
-  --color-dark-accent-text: #ffffff;
+  --color-dark-accent: rgba(251, 255, 122, 0.776);
+  --color-dark-accent-text: #141415;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --color-text-heading: var(--color-dark-text-heading);
     --color-text-body: var(--color-dark-text-body);
@@ -44,7 +44,7 @@
     --color-accent: var(--color-dark-accent);
     --color-accent-text: var(--color-dark-accent-text);
   }
-} */
+}
 
 * {
   /* Reset margins and padding */
@@ -83,7 +83,7 @@ textarea,
 ul,
 video {
   /* Margins for most elements */
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 html,
@@ -97,7 +97,7 @@ button {
 body {
   /* Center body in page */
   margin: 0 auto;
-  max-width: 750px;
+  max-width: 60ch;
   padding: 2rem;
   border-radius: 6px;
   overflow-x: hidden;
@@ -107,7 +107,7 @@ body {
 
   /* Main body text */
   color: var(--color-text-body);
-  font-size: 1.03rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -144,35 +144,40 @@ h6 {
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  /* line-height: 2.5rem; */
+  /* margin-top: calc(var(--line-height) * 2);
+		margin-bottom:var(--h1-margin-bottom) */
 }
 
 h2 {
-  font-size: 1.85rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  /* line-height: 2rem;
+  letter-spacing: 0.01em; */
 }
 
-h3 {
-  font-size: 1.55rem;
-}
-
-h4 {
-  font-size: 1.25rem;
-}
-
-h5 {
-  font-size: 1rem;
-}
-
+h3,
+h4,
+h5,
 h6 {
-  font-size: 0.875rem;
+  font-size: inherit;
+  font-weight: 600;
 }
 
 a {
   color: var(--color-link);
+  text-decoration: none;
 }
 
 a:hover {
   color: var(--color-link-hover);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+  transition: color 0.2s ease-in-out;
 }
 
 abbr:hover {
@@ -435,7 +440,7 @@ ul {
 }
 
 li {
-  margin-top: 0.4rem;
+  margin-top: 0.125rem;
 }
 
 ul ul,
