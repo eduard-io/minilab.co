@@ -9,40 +9,40 @@
   /* Light theme */
   --color-text-heading: #1f262b;
   --color-text-body: #1a1a1a;
-  --nc-bg-1: #fdfdfd;
-  --nc-bg-2: #f6f8fa;
-  --nc-bg-3: #e5e7eb;
-  --nc-lk-1: #0070f3;
-  --nc-lk-2: #0366d6;
-  --nc-lk-tx: #ffffff;
-  --nc-ac-1: #79ffe1;
-  --nc-ac-tx: #0c4047;
+  --color-background: #fdfdfd;
+  --color-surface: #f6f8fa;
+  --color-border: #e5e7eb;
+  --color-link: #0070f3;
+  --color-link-hover: #0366d6;
+  --color-link-text: #ffffff;
+  --color-accent: #79ffe1;
+  --color-accent-text: #0c4047;
 
   /* Dark theme */
-  --nc-d-tx-1: #e6e8eb;
-  --nc-d-tx-2: #eeeeee;
-  --nc-d-bg-1: #141415;
-  --nc-d-bg-2: #202021;
-  --nc-d-bg-3: #222222;
-  --nc-d-lk-1: #3291ff;
-  --nc-d-lk-2: #0070f3;
-  --nc-d-lk-tx: #ffffff;
-  --nc-d-ac-1: #f7ff00;
-  --nc-d-ac-tx: #ffffff;
+  --color-dark-text-heading: #e6e8eb;
+  --color-dark-text-body: #eeeeee;
+  --color-dark-background: #141415;
+  --color-dark-surface: #202021;
+  --color-dark-border: #222222;
+  --color-dark-link: #3291ff;
+  --color-dark-link-hover: #0070f3;
+  --color-dark-link-text: #ffffff;
+  --color-dark-accent: #f7ff00;
+  --color-dark-accent-text: #ffffff;
 }
 
 /* @media (prefers-color-scheme: dark) {
   :root {
-    --color-text-heading: var(--nc-d-tx-1);
-    --color-text-body: var(--nc-d-tx-2);
-    --nc-bg-1: var(--nc-d-bg-1);
-    --nc-bg-2: var(--nc-d-bg-2);
-    --nc-bg-3: var(--nc-d-bg-3);
-    --nc-lk-1: var(--nc-d-lk-1);
-    --nc-lk-2: var(--nc-d-lk-2);
-    --nc-lk-tx: var(--nc--dlk-tx);
-    --nc-ac-1: var(--nc-d-ac-1);
-    --nc-ac-tx: var(--nc--dac-tx);
+    --color-text-heading: var(--color-dark-text-heading);
+    --color-text-body: var(--color-dark-text-body);
+    --color-background: var(--color-dark-background);
+    --color-surface: var(--color-dark-surface);
+    --color-border: var(--color-dark-border);
+    --color-link: var(--color-dark-link);
+    --color-link-hover: var(--color-dark-link-hover);
+    --color-link-text: var(--color-dark-link-text);
+    --color-accent: var(--color-dark-accent);
+    --color-accent-text: var(--color-dark-accent-text);
   }
 } */
 
@@ -103,7 +103,7 @@ body {
   overflow-x: hidden;
   word-break: break-word;
   overflow-wrap: break-word;
-  background: var(--nc-bg-1);
+  background: var(--color-background);
 
   /* Main body text */
   color: var(--color-text-body);
@@ -113,8 +113,8 @@ body {
 
 ::selection {
   /* Set background color for selected text */
-  background: var(--nc-ac-1);
-  color: var(--nc-ac-tx);
+  background: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 h1,
@@ -134,7 +134,7 @@ h3 {
   color: var(--color-text-heading);
   padding-bottom: 2px;
   margin-bottom: 8px;
-  border-bottom: 1px solid var(--nc-bg-2);
+  border-bottom: 1px solid var(--color-surface);
 }
 
 h4,
@@ -168,11 +168,11 @@ h6 {
 }
 
 a {
-  color: var(--nc-lk-1);
+  color: var(--color-link);
 }
 
 a:hover {
-  color: var(--nc-lk-2);
+  color: var(--color-link-hover);
 }
 
 abbr:hover {
@@ -182,8 +182,8 @@ abbr:hover {
 
 blockquote {
   padding: 1.5rem;
-  background: var(--nc-bg-2);
-  border-left: 5px solid var(--nc-bg-3);
+  background: var(--color-surface);
+  border-left: 5px solid var(--color-border);
 }
 
 abbr {
@@ -196,8 +196,8 @@ blockquote *:last-child {
 }
 
 header {
-  background: var(--nc-bg-2);
-  border-bottom: 1px solid var(--nc-bg-3);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
   padding: 2rem 1.5rem;
 
   /* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
@@ -249,13 +249,13 @@ input[type='button'] {
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-  background: var(--nc-lk-1);
-  color: var(--nc-lk-tx);
+  background: var(--color-link);
+  color: var(--color-link-text);
   border: 0;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
-  color: var(--nc-lk-tx);
+  color: var(--color-link-text);
 }
 
 a button[disabled],
@@ -280,7 +280,7 @@ input[type='reset']:focus,
 input[type='reset']:enabled:hover,
 input[type='button']:focus,
 input[type='button']:enabled:hover {
-  background: var(--nc-lk-2);
+  background: var(--color-link-hover);
 }
 
 a img {
@@ -300,8 +300,8 @@ samp,
 kbd,
 pre {
   /* The main preformatted style. This is changed slightly across different cases. */
-  background: var(--nc-bg-2);
-  border: 1px solid var(--nc-bg-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 4px;
   padding: 3px 6px;
   /* ↓ font-size is relative to containing element, so it scales for titles*/
@@ -310,7 +310,7 @@ pre {
 
 kbd {
   /* Makes the kbd element look like a keyboard key */
-  border-bottom: 3px solid var(--nc-bg-3);
+  border-bottom: 3px solid var(--color-border);
 }
 
 pre {
@@ -343,8 +343,8 @@ code pre {
 details {
   /* Make the <details> look more "clickable" */
   padding: 0.6rem 1rem;
-  background: var(--nc-bg-2);
-  border: 1px solid var(--nc-bg-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 4px;
 }
 
@@ -381,14 +381,14 @@ dd::before {
 hr {
   /* Reset the border of the <hr> separator, then set a better line */
   border: 0;
-  border-bottom: 1px solid var(--nc-bg-3);
+  border-bottom: 1px solid var(--color-border);
   margin: 1rem auto;
 }
 
 fieldset {
   margin-top: 1rem;
   padding: 2rem;
-  border: 1px solid var(--nc-bg-3);
+  border: 1px solid var(--color-border);
   border-radius: 4px;
 }
 
@@ -404,18 +404,18 @@ table {
 
 td,
 th {
-  border: 1px solid var(--nc-bg-3);
+  border: 1px solid var(--color-border);
   text-align: left;
   padding: 0.5rem;
 }
 
 th {
-  background: var(--nc-bg-2);
+  background: var(--color-surface);
 }
 
 tr:nth-child(even) {
   /* Set every other cell slightly darker. Improves readability. */
-  background: var(--nc-bg-2);
+  background: var(--color-surface);
 }
 
 table caption {
@@ -447,8 +447,8 @@ ol ol {
 
 mark {
   padding: 3px 6px;
-  background: var(--nc-ac-1);
-  color: var(--nc-ac-tx);
+  background: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 textarea,
@@ -456,9 +456,9 @@ select,
 input {
   padding: 6px 12px;
   margin-bottom: 0.5rem;
-  background: var(--nc-bg-2);
+  background: var(--color-surface);
   color: var(--color-text-body);
-  border: 1px solid var(--nc-bg-3);
+  border: 1px solid var(--color-border);
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
