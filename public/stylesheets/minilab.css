@@ -1,0 +1,106 @@
+:root {
+	/* Typography */
+	/*--font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+	Roboto, 'Helvetica Neue', Arial, sans-serif;*/
+	
+	--rhythm: 1.5rem; /* line-height baseline */
+
+	/* Light theme */
+	/* --color-background: #fffff8; /* Light yellow */
+	--color-background: #fdfdfd;
+	--color-text-primary: #1F262B;
+	--color-selection: #FFFFA3;
+	
+	/* TODO: Dark theme */
+	
+	--font-family: InterVariable;
+	
+	/* font-family: Inter, sans-serif; */
+	/* font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+	
+	/* font-size needed at :root for rem to work as expected */
+    font-family: var(--font-family), sans-serif;
+    font-synthesis: none;
+    font-size: var(--font-size);
+    font-feature-settings: 'liga' 1, 'calt' 1; /* workaround for bug in Chrome */
+}
+
+:root {
+  
+}
+
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* TODO */
+::selection {
+	/* Set background color for selected text */
+	background: var(--color-selection);
+	/*color: var(--nc-ac-tx); */
+}
+
+body {
+  /* Center body in page */
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 2rem;
+  
+  overflow-wrap: break-word;
+  
+  background-color: var(--color-background);
+  
+  /* Main body text */
+  /* font-family: var(--font-sans); */
+  color: var(--color-text-primary);
+  //line-height: 1.5;
+}
+
+/* Headings */
+h1, h2, h3 {
+  /* color: var(--color-text); */
+  font-weight: 700;
+  line-height: calc(var(--rhythm) * 0.8333333333);
+  margin-bottom: calc(var(--rhythm) * 0.9);
+}
+
+h1 {
+  font-size: 3.2rem;
+  margin-top: calc(var(--rhythm) * 3);
+}
+
+h2 {
+  font-style: italic;
+  font-size: 2.2rem;
+  margin-top: calc(var(--rhythm) * 2.5);
+}
+
+h3 {
+  font-style: italic;
+  font-size: 1.7rem;
+  margin-top: calc(var(--rhythm) * 2);
+}
+
+/* Paragraphs */
+p {
+  line-height: 1.5;
+  margin-bottom: var(--rhythm);
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: calc(var(--rhythm) * 1.2) 0;
+}
+
+/* Optional: tighter rhythm for consecutive elements */
+p + h2,
+p + h3 {
+  margin-top: calc(var(--rhythm) * 2.2);
+}
