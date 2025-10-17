@@ -1,6 +1,5 @@
 ---
 title: Changelog
-layout: layouts/default
 ---
 
 # Changelog

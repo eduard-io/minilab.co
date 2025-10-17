@@ -1,9 +1,5 @@
 ---
-
 title: Now
-
-layout: layouts/default
-
 ---
 
 # Now

@@ -1,6 +1,5 @@
 ---
 title: minilab.co/eduard
-layout: layouts/default
 ---
 
 # Hello!

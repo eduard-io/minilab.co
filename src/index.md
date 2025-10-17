@@ -1,6 +1,5 @@
 ---
 title: Welcome to the minilab
-layout: layouts/default
 ---
 
 <img src="/images/minilab.png" alt="Minilab logo" width="80" style="margin-top: 2rem; margin-bottom: 4rem;">
