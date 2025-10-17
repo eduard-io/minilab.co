@@ -34,14 +34,17 @@
 .now {
   /* --color-link: #40f300; */
   --color-link-hover: #D603CF;
+  --color-dark-link-hover: #F256ED;
 }
 
 .colophon {
   --color-link-hover: #D67303;
+  --color-dark-link-hover: #F2A956;
 }
 
 .changelog {
   --color-link-hover: #03D609;
+  --color-dark-link-hover: #56F25B;
 }
 
 @media (prefers-color-scheme: dark) {
