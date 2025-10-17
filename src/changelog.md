@@ -10,7 +10,7 @@ title: Changelog
 - Add [/eduard](/eduard) and [/eduard/now](/eduard/now), including its own 
 layout
 - Small header improvements 
-- Update the layout & add nice effect to links
+- Update the layout & fun links
 
 ### October 16th, 2025
 
