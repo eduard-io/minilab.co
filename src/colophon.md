@@ -4,10 +4,10 @@ title: Colophon
 
 # Colophon
 
-The minilab is a static site built using [11ty](https://www.11ty.dev) and hosted
-on [Netlify](https://www.netlify.com). It's built by hand with
-[Nova](https://nova.app) with some minor assistance from AI. You can check the
-source in [Github](https://github.com/eduar-io/minilab.co).
+Built on [Nova](https://nova.app) with plan old HTML, CSS and ☕. Statically 
+generated using using [11ty](https://www.11ty.dev) and hosted on
+[Netlify](https://www.netlify.com). Source available in 
+[Github](https://github.com/eduar-io/minilab.co).
 
 It uses [umami](https://umami.is) for privacy conscious tracking.
 
