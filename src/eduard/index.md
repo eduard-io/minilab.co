@@ -10,7 +10,7 @@ technology, cooking and music.
 
 You can check my [portfolio](https://eduard.io) for work related suff.
 
-### Links
+### My stuff
 
 - [Now](/eduard/now): what's happening now in the minilab
 
