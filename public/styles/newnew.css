@@ -178,16 +178,19 @@ h6 {
 }
 
 a {
-  color: var(--color-link);
+  position: relative;
   text-decoration: none;
+  color: var(--color-link);
+  background-image: linear-gradient(var(--color-link-hover), var(--color-link-hover));
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  background-position: 50% 100%;
+  transition: background-size 0.25s ease-in-out;
 }
-
 a:hover {
+  
   color: var(--color-link-hover);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.15em;
-  transition: color 0.2s ease-in-out;
+  background-size: 100% 2px;
 }
 
 abbr:hover {
