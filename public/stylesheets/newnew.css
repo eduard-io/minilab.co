@@ -123,7 +123,7 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1;
+  line-height: 1.5;
   color: var(--color-text-heading);
   padding-top: 0.875rem;
 }

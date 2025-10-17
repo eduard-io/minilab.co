@@ -7,11 +7,17 @@
     <!-- <link rel="stylesheet" href="/stylesheets/tufte.min.css.css" /> -->
     <!-- <link rel="stylesheet" href="/stylesheets/tufte.min.css" /> -->
 
-    <script
-      defer
-      src="https://cloud.umami.is/script.js"
-      data-website-id="e28f437c-7e92-4049-a866-5bcbb4580d8d"
-    ></script>
+    {# Analytics #}
+    {% if env.CONTEXT == "production" %}
+      <link rel="preconnect" href="https://cloud.umami.is" />
+      <script
+        defer
+        src="https://cloud.umami.is/script.js"
+        data-website-id="e28f437c-7e92-4049-a866-5bcbb4580d8d"
+      ></script>
+    {% endif %}
+    
+    
 
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
