@@ -8,10 +8,10 @@
 
   /* Light theme */
   --color-text-heading: #333;
-  --color-text-body: #444;
+  --color-text-body: #556;
   --color-background: #fdfdfd;
   --color-surface: #f6f8fa;
-  --color-border: #e5e7eb;
+  --color-border: #ddd;
   --color-link: #0070f3;
   --color-link-hover: #0366d6;
   --color-link-text: #ffffff;
@@ -164,7 +164,7 @@ body {
 
 main {
   margin: 0 auto;
-  max-width: 55ch;
+  max-width: 50ch;
 }
 
 ::selection {
@@ -174,7 +174,7 @@ main {
 }
 
 p { 
-  margin-bottom: 1.2em; line-height: 1.65; 
+  margin-bottom: 1.2em; line-height: 1.66; 
 }
 
 h1,
@@ -449,10 +449,30 @@ dd::before {
 }
 
 hr {
-  /* Reset the border of the <hr> separator, then set a better line */
-  border: 0;
-  border-bottom: 1px solid var(--color-border);
-  margin: 1rem auto;
+  /* border: 0;
+  border-bottom: 1px dotted var(--color-border); */
+  position: relative;
+  border: none;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+p + hr {
+  /* margin-top: 1.5rem;  /* space after paragraph */
+  padding-top: 2rem;
+}
+ 
+
+hr::before {
+  /* content: "⁕⁕⁕" */
+  /* content: "* * *"; */
+  content: "✦ ✦ ✦";
+  /* content: "∴ ∵ ∴"; */
+  letter-spacing: 0.6em;
+  color: var(--color-border);
+  font-size: 1rem;
+  display: inline-block;
+  transform: translateY(-0.2em);
 }
 
 fieldset {

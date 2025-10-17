@@ -2,13 +2,15 @@
 title: minilab.co/eduard
 ---
 
-# Hello!
+# Hey visitor!
 
 I'm Eduard.  This is my corner in the [minilab](https://minilab.co). Now it only
 has my <a href="/eduard/now" class="now">/now</a> page. But I will fill it with personal interests such as 
 technology, cooking and music.
 
 You can check my <a href="https://eduard.io" class="eduard">portfolio</a> for work related suff.
+
+---
 
 ### My stuff
 
