@@ -8,7 +8,7 @@ title: Welcome to the minilab
 
 An independent initiative for small services, experiments, and ideas.
 
-Run by [Eduard Giménez](/eduard). the only member, for now.
+Run by <a href="/eduard" class="eduard">Eduard Giménez</a>. the only member, for now.
 
 The lab is never finished 🚧.
 
@@ -17,8 +17,8 @@ The lab is never finished 🚧.
 - [Home](/): _you're here._
 - <a href="/now" class="now">Now</a>: what's happening now in the minilab
 - <a href="/colophon" class="colophon">Colophon</a>: information of how the minilab is built
-- <a href="/changelog" class="now">Changelog</a>: record of changes
+- <a href="/changelog" class="changelog">Changelog</a>: record of changes
 
 ### Lab members
 
-- [Eduard](/eduard)
+- <a href="/eduard" class="eduard">Eduard</a>: record of changes 

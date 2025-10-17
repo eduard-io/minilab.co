@@ -201,7 +201,9 @@ a {
   background-repeat: no-repeat;
   background-size: 0% 2px;
   background-position: 50% 100%;
-  transition: background-size 0.25s ease-in-out;
+  transition:
+    color 0.25s ease-in-out,
+    background-size 0.25s cubic-bezier(.4, 0, .2, 1);
 }
 a:hover {
   
@@ -580,3 +582,32 @@ main {
 .site-footer {
   flex-shrink: 0;
 }
+
+a.eduard {
+  position: relative;
+  text-decoration: none;
+  background-image: linear-gradient(
+    90deg,
+    #ff6b6b,
+    #f8c74a,
+    #51cf66,
+    #339af0,
+    #845ef7,
+    #ff6b6b
+  );
+  background-size: 0% 2px;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  transition:
+    color 0.25s ease-in-out,
+    background-size 0.25s cubic-bezier(.4, 0, .2, 1);
+}
+a.eduard:hover {
+  color: var(--color-link-hover);
+  background-size: 100% 2px;
+  background-size: 100% 2px;
+}
+
+  
+  
+  
