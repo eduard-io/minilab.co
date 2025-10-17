@@ -10,7 +10,7 @@ layout: layouts/default
 A tiny lab on the internet. An independent initiative for small services,
 experiments, and ideas.
 
-Run by [Eduard Giménez](https://eduard.io). the only member, for now.
+Run by [Eduard Giménez](/eduard). the only member, for now.
 
 The lab is never finished 🚧.
 
