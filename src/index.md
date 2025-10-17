@@ -1,6 +1,5 @@
 ---
 title: Welcome to the minilab
-layout: layouts/default
 ---
 
 <img src="/images/minilab.png" alt="Minilab logo" width="80" style="margin-top: 2rem; margin-bottom: 4rem;">
@@ -10,7 +9,7 @@ layout: layouts/default
 A tiny lab on the internet. An independent initiative for small services,
 experiments, and ideas.
 
-Run by [Eduard Giménez](https://eduard.io). the only member, for now.
+Run by [Eduard Giménez](/eduard). the only member, for now.
 
 The lab is never finished 🚧.
 

@@ -1,6 +1,5 @@
 ---
 title: Colophon
-layout: layouts/default
 ---
 
 # Colophon

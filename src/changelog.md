@@ -1,6 +1,5 @@
 ---
 title: Changelog
-layout: layouts/default
 ---
 
 # Changelog
@@ -8,6 +7,9 @@ layout: layouts/default
 ### October 17th, 2025
 
 - Add sitemap, robots, and clean up layout structure
+- Add [/eduard](/eduard) and [/eduard/now](/eduard/now), including its own 
+layout
+- Small header improvements 
 
 ### October 16th, 2025
 
