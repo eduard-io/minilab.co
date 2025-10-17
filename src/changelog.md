@@ -5,6 +5,10 @@ layout: layouts/default
 
 # Changelog
 
+### October 17th, 2025
+
+- Add sitemap, robots, and clean up layout structure
+
 ### October 16th, 2025
 
 - Migrate to [new.css](https://newcss.net) as it seems will be easier to work

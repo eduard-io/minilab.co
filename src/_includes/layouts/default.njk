@@ -3,8 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }}</title>
-
+    <title>
+      {% if title %}
+        {{ title }} - minilab.co
+      {% else %}
+        minilab.co
+      {% endif %}
+    </title>
+    
+    <link rel="canonical" href="https://minilab.co" />
+    <meta name="robots" content="index,follow" />
+    
+    <meta name="description" content="A tiny lab on the internet. An independent initiative for small services, experiments, and ideas. Run by Eduard Giménez." />
+    <meta name="keywords" content="minimalist website, personal publishing, digital garden, indie web, static site, eleventy, creative lab, personal blog, microblog, family website, digital home, minilab, eduard gimenez" />
+    <meta name="author" content="minilab.co" />
+    
+    <meta name="theme-color" content="#f6f8fa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#202021" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="/stylesheets/newnew.css" />
+    
     {# Analytics #}
     {% if env.CONTEXT == "production" %}
       <link rel="preconnect" href="https://cloud.umami.is" />
@@ -14,12 +35,6 @@
         data-website-id="e28f437c-7e92-4049-a866-5bcbb4580d8d"
       ></script>
     {% endif %}
-    
-    
-
-    <link rel="preconnect" href="https://rsms.me/" />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    <link rel="stylesheet" href="/stylesheets/newnew.css" />
   </head>
 
   <body>
@@ -27,11 +42,6 @@
       <p><strong>minilab.co</strong></p>
       <nav>
         <a href="/">Home</a> • <a href="/now/">Now</a> • <a href="/colophon/">Colophon</a> • <a href="/changelog/">Changelog</a>
-        <!-- /
-        <a href="https://newcss.net/usage/elements/">Elements</a> /
-        <a href="https://newcss.net/themes/">Themes</a> /
-        <a href="https://github.com/xz/new.css">GitHub</a> /
-        <a href="https://discord.gg/hhuuC4w">Discord</a> -->
       </nav>
     </header>
 
@@ -42,8 +52,8 @@
     </main>
 
     <footer>
-      <p>&copy; 2025 <a class="logo" href="/">minilab.co</a>. All rights reserved.</p>
-      <p>Last updated on <a href="/changelog">October 2025</p>
+      <p>&copy; 2025 <a class="logo" href="/">minilab.co</a>. All rights reserved.<br>
+      Last updated on <a href="/changelog">October 2025</a></p>
     </footer>
     <div class="end-gap" aria-hidden="true"></div>
   </body>
