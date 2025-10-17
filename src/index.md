@@ -15,9 +15,9 @@ The lab is never finished 🚧.
 ### Explore the lab
 
 - [Home](/): _you're here._
-- [Now](/now): what's happening now in the minilab
-- [Colophon](/colophon): information of how the minilab is built
-- [Changelog](/changelog): record of changes
+- <a href="/now" class="now">Now</a>: what's happening now in the minilab
+- <a href="/colophon" class="colophon">Colophon</a>: information of how the minilab is built
+- <a href="/changelog" class="now">Changelog</a>: record of changes
 
 ### Lab members
 
