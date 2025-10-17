@@ -1,0 +1,488 @@
+:root {
+  --nc-font-sans:
+    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  --nc-font-mono:
+    Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
+
+  /* Light theme */
+  --color-text-heading: #333;
+  --color-text-body: #444;
+  --color-background: #fdfdfd;
+  --color-surface: #f6f8fa;
+  --color-border: #e5e7eb;
+  --color-link: #0070f3;
+  --color-link-hover: #0366d6;
+  --color-link-text: #ffffff;
+  --color-accent: rgba(251, 255, 122, 0.776);
+  --color-accent-text: #444;
+
+  /* Dark theme */
+  --color-dark-text-heading: #e6e8eb;
+  --color-dark-text-body: #eeeeee;
+  --color-dark-background: #141415;
+  --color-dark-surface: #202021;
+  --color-dark-border: #222222;
+  --color-dark-link: #3291ff;
+  --color-dark-link-hover: #0070f3;
+  --color-dark-link-text: #ffffff;
+  --color-dark-accent: rgba(251, 255, 122, 0.776);
+  --color-dark-accent-text: #141415;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-heading: var(--color-dark-text-heading);
+    --color-text-body: var(--color-dark-text-body);
+    --color-background: var(--color-dark-background);
+    --color-surface: var(--color-dark-surface);
+    --color-border: var(--color-dark-border);
+    --color-link: var(--color-dark-link);
+    --color-link-hover: var(--color-dark-link-hover);
+    --color-link-text: var(--color-dark-link-text);
+    --color-accent: var(--color-dark-accent);
+    --color-accent-text: var(--color-dark-accent-text);
+  }
+}
+
+* {
+  /* Reset margins and padding */
+  margin: 0;
+  padding: 0;
+}
+
+address,
+area,
+article,
+aside,
+audio,
+blockquote,
+datalist,
+details,
+dl,
+fieldset,
+figure,
+form,
+input,
+iframe,
+img,
+meter,
+nav,
+ol,
+optgroup,
+option,
+output,
+p,
+pre,
+progress,
+ruby,
+section,
+table,
+textarea,
+ul,
+video {
+  /* Margins for most elements */
+  margin-bottom: 1.5rem;
+}
+
+html,
+input,
+select,
+button {
+  /* Set body font family and some finicky elements */
+  font-family: var(--nc-font-sans);
+}
+
+body {
+  /* Center body in page */
+  margin: 0 auto;
+  max-width: 60ch;
+  padding: 2rem;
+  border-radius: 6px;
+  overflow-x: hidden;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  background: var(--color-background);
+
+  /* Main body text */
+  color: var(--color-text-body);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+::selection {
+  /* Set background color for selected text */
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+  color: var(--color-text-heading);
+  padding-top: 0.875rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-text-heading);
+  padding-bottom: 2px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--color-surface);
+}
+
+h4,
+h5,
+h6 {
+  margin-bottom: 0.3rem;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  /* line-height: 2.5rem; */
+  /* margin-top: calc(var(--line-height) * 2);
+		margin-bottom:var(--h1-margin-bottom) */
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  /* line-height: 2rem;
+  letter-spacing: 0.01em; */
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 600;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+  transition: color 0.2s ease-in-out;
+}
+
+abbr:hover {
+  /* Set the '?' cursor while hovering an abbreviation */
+  cursor: help;
+}
+
+blockquote {
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border-left: 5px solid var(--color-border);
+}
+
+abbr {
+  cursor: help;
+}
+
+blockquote *:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 2rem 1.5rem;
+
+  /* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
+
+  margin: -2rem calc(50% - 50vw) 2rem;
+
+  /* Shorthand for:
+
+	margin-top: -2rem;
+	margin-bottom: 2rem;
+
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw); */
+
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
+}
+
+header h1,
+header h2,
+header h3 {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+header > *:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+header > *:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  color: var(--color-text-heading);
+  margin-top: 4rem;
+  font-size: 0.8rem;
+}
+
+a button,
+button,
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+  font-size: 1rem;
+  display: inline-block;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background: var(--color-link);
+  color: var(--color-link-text);
+  border: 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: var(--color-link-text);
+}
+
+a button[disabled],
+button[disabled],
+input[type='submit'][disabled],
+input[type='reset'][disabled],
+input[type='button'][disabled] {
+  cursor: default;
+  opacity: 0.5;
+
+  /* Set the [X] cursor while hovering a disabled link */
+  cursor: not-allowed;
+}
+
+.button:focus,
+.button:enabled:hover,
+button:focus,
+button:enabled:hover,
+input[type='submit']:focus,
+input[type='submit']:enabled:hover,
+input[type='reset']:focus,
+input[type='reset']:enabled:hover,
+input[type='button']:focus,
+input[type='button']:enabled:hover {
+  background: var(--color-link-hover);
+}
+
+a img {
+  margin-bottom: 0px;
+}
+
+code,
+pre,
+kbd,
+samp {
+  /* Set the font family for monospaced elements */
+  font-family: var(--nc-font-mono);
+}
+
+code,
+samp,
+kbd,
+pre {
+  /* The main preformatted style. This is changed slightly across different cases. */
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 3px 6px;
+  /* ↓ font-size is relative to containing element, so it scales for titles*/
+  font-size: 0.9em;
+}
+
+kbd {
+  /* Makes the kbd element look like a keyboard key */
+  border-bottom: 3px solid var(--color-border);
+}
+
+pre {
+  padding: 1rem 1.4rem;
+  max-width: 100%;
+  overflow: auto;
+}
+
+pre code {
+  /* When <code> is in a <pre>, reset it's formatting to blend in */
+  background: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+code pre {
+  /* When <pre> is in a <code>, reset it's formatting to blend in */
+  display: inline;
+  background: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+details {
+  /* Make the <details> look more "clickable" */
+  padding: 0.6rem 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+summary {
+  /* Makes the <summary> look more like a "clickable" link with the pointer cursor */
+  cursor: pointer;
+  font-weight: bold;
+}
+
+details[open] {
+  /* Adjust the <details> padding while open */
+  padding-bottom: 0.75rem;
+}
+
+details[open] summary {
+  /* Adjust the <details> padding while open */
+  margin-bottom: 6px;
+}
+
+details[open] > *:last-child {
+  /* Resets the bottom margin of the last element in the <details> while <details> is opened. This prevents double margins/paddings. */
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd::before {
+  /* Add an arrow to data table definitions */
+  content: '→ ';
+}
+
+hr {
+  /* Reset the border of the <hr> separator, then set a better line */
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  margin: 1rem auto;
+}
+
+fieldset {
+  margin-top: 1rem;
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+legend {
+  padding: auto 0.5rem;
+}
+
+table {
+  /* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid var(--color-border);
+  text-align: left;
+  padding: 0.5rem;
+}
+
+th {
+  background: var(--color-surface);
+}
+
+tr:nth-child(even) {
+  /* Set every other cell slightly darker. Improves readability. */
+  background: var(--color-surface);
+}
+
+table caption {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+textarea {
+  /* Don't let the <textarea> extend off the screen naturally or when dragged by the user */
+  max-width: 100%;
+}
+
+ol,
+ul {
+  /* Replace the browser default padding */
+  padding-left: 2rem;
+}
+
+li {
+  margin-top: 0.125rem;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0;
+}
+
+mark {
+  padding: 3px 6px;
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+}
+
+textarea,
+select,
+input {
+  padding: 6px 12px;
+  margin-bottom: 0.5rem;
+  background: var(--color-surface);
+  color: var(--color-text-body);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/******** COMPONENTS *********/
+.site-header {
+  /* padding-block: var(--space-4);
+  border-bottom: var(--border);
+  background: var(--color-surface); */
+}
+
+.brand { 
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin-bottom: 0.5rem;
+}
