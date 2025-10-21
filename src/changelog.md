@@ -4,6 +4,9 @@ title: Changelog
 
 # Changelog
 
+### October 21st, 2025
+- Add a [CSS Specimen](/specimen) to easily check and fix the style
+
 ### October 17th, 2025
 
 - Add sitemap, robots, and clean up layout structure
