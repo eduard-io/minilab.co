@@ -555,7 +555,9 @@ input {
 }
 
 img {
-  max-width: 100%;
+  max-width: 100%; 
+  display: block; 
+  height: auto;
 }
 
 
