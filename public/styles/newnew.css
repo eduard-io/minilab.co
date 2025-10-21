@@ -143,7 +143,9 @@ input,
 select,
 button {
   /* Set body font family and some finicky elements */
-  font-family: var(--nc-font-sans);
+  font-family: var(--nc-font-sans);    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; /* Firefox on macOS */
+    text-rendering: optimizeLegibility; /* Optional, helps kerning */
 }
 
 body {
