@@ -3,6 +3,7 @@
 ## Now
 - [ ] Fix/remove link animation on mobile devices
 - [ ] Fix: images not responsive, see `/specimen`
+- [ ] Improvement: header & footer are too wide.
 
 ## Next
 - [ ] Setup `/eduard/blog` or `/eduard/notes` 
