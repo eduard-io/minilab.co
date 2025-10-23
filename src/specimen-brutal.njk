@@ -1,0 +1,246 @@
+---
+title: CSS Specimen
+permalink: /specimen-brutal/
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CSS Specimen</title>
+
+    <meta name="theme-color" content="#f6f8fa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#202021" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+
+   <link rel="preconnect" href="https://rsms.me/" />
+   <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+   <!-- <link rel="stylesheet" href="/styles/newnew.css" /> -->
+   <link rel="stylesheet" href="/styles/brutal-lab.css" />
+
+    <style>
+      /* helper styles for specimen layout only */
+      .wrap { max-width: 70ch; margin-inline: auto; padding-inline: 1rem; }
+      .swatch { display:inline-block; width:1.25rem; height:1.25rem; border:1px solid var(--color-rule); border-radius:3px; vertical-align:middle; margin-right:.35rem;}
+      .row { display:grid; gap:1rem; grid-template-columns: 1fr; }
+      @media (min-width: 900px){ .row{ grid-template-columns: 1fr 1fr; } }
+      .card { padding:1rem; background:var(--color-background-alt, var(--color-background)); border:1px solid var(--color-rule); border-radius:6px; }
+      .tone-grid{ display:grid; gap:.5rem; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); }
+      .tone-grid a{ display:inline-block; margin-right:.5rem; }
+      footer.site-footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--color-rule); font-size: .9rem; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <main class="wrap" role="main">
+      {% include "components/header.njk" %}
+      
+      <article>
+        <header>
+          <h1>CSS Specimen</h1>
+          <p>This page showcases headings, text, links, lists, quotes, rules, code, tables, forms, details, and header/footer components. It also previews the <code>.now</code>, <code>.colophon</code>, <code>.changelog</code>, and <code>.eduard</code> tone classes for link hovers.</p>
+        </header>
+
+        <section id="typography">
+          <h2>Headings &amp; Paragraphs</h2>
+          <p><strong>Body text</strong> with <em>emphasis</em>, <a href="#links">a link</a>, <mark>highlight</mark>, <abbr title="HyperText Markup Language">HTML</abbr>, and <kbd>⌘</kbd>+<kbd>K</kbd> styled keys.</p>
+          <h3>H3 subheading</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <h4>H4 subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. <samp>Sample</samp> and <code>inlineCode()</code> too.</p>
+          <h5>H5 subheading</h5>
+          <p>Curabitur blandit tempus porttitor.</p>
+          <h6>H6 subheading</h6>
+          <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+        </section>
+
+        <hr />
+
+        <section id="links">
+            <h2>Links &amp; Context Tones</h2>
+            <div class="tone-grid">
+              <div class="card now">
+                <strong>.now</strong><br />
+                Try: <a href="#">hover me</a>, <a href="#">another link</a>
+              </div>
+              <div class="card colophon">
+                <strong>.colophon</strong><br />
+                Try: <a href="#">hover me</a>, <a href="#">another link</a>
+              </div>
+              <div class="card changelog">
+                <strong>.changelog</strong><br />
+                Try: <a href="#">hover me</a>, <a href="#">another link</a>
+              </div>
+              <div class="card eduard">
+                <strong>.eduard</strong><br />
+                Try: <a href="#">hover me</a>, <a href="#">another link</a>
+              </div>
+            </div>
+            <p style="margin-top:1rem">Default: <a href="#">standard link</a></p>
+        </section>
+
+        <hr />
+
+        <section id="lists">
+            <h2>Lists</h2>
+            <div class="row">
+              <div>
+                <h3>Unordered</h3>
+                <ul>
+                  <li>First</li>
+                  <li>
+                    Second
+                    <ul>
+                      <li>Nested A</li>
+                      <li>Nested B</li>
+                    </ul>
+                  </li>
+                  <li>Third</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Ordered</h3>
+                <ol>
+                  <li>One</li>
+                  <li>
+                    Two
+                    <ol>
+                      <li>Two-A</li>
+                      <li>Two-B</li>
+                    </ol>
+                  </li>
+                  <li>Three</li>
+                </ol>
+              </div>
+            </div>
+            <h3>Definition list</h3>
+            <dl>
+              <dt>Minilab</dt>
+              <dd>A tiny lab on the internet.</dd>
+              <dt>Eleventy</dt>
+              <dd>A simple static site generator.</dd>
+            </dl>
+        </section>
+
+        <hr />
+
+        <section id="blockquote">
+          <h2>Blockquote</h2>
+          <blockquote>
+            <p>“A small home on the web beats a big rented room on a platform.”</p>
+            <cite>— Someone sensible</cite>
+          </blockquote>
+        </section>
+
+        <hr />
+
+        <section id="code">
+          <h2>Code &amp; Preformatted</h2>
+          <p>Inline code: <code>npm run build</code></p>
+          <pre><code>// Fenced block
+function hello(name) {
+return `Hello, ${name}`;
+}
+console.log(hello("Minilab"));
+</code></pre>
+        </section>
+
+        <hr />
+
+        <section id="rules">
+          <h2>Horizontal Rule</h2>
+          <p>Custom separator below (styled via <code>hr::before</code>):</p>
+          <hr />
+        </section>
+
+        <hr />
+
+        <section id="table">
+          <h2>Table</h2>
+          <table>
+            <caption>
+              Sample Data
+            </caption>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Status</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Typography</td>
+                <td>OK</td>
+                <td><span class="swatch" style="background:var(--color-text);"></span>Body color</td>
+              </tr>
+              <tr>
+                <td>Surface</td>
+                <td>OK</td>
+                <td><span class="swatch" style="background:var(--color-background);"></span>Cards &amp; code</td>
+              </tr>
+              <tr>
+                <td>Links</td>
+                <td>OK</td>
+                <td><span class="swatch" style="background:var(--color-link);"></span>Default &nbsp; <span class="swatch" style="background:var(--color-link-hover);"></span>Hover</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <hr />
+
+        <section id="forms">
+          <h2>Forms &amp; Buttons</h2>
+          <form action="#" method="post">
+            <fieldset>
+              <legend>Contact</legend>
+              <label for="name">Name</label><br />
+              <input id="name" name="name" type="text" placeholder="Ada Lovelace" /><br />
+
+              <label for="email">Email</label><br />
+              <input id="email" name="email" type="email" placeholder="ada@example.com" /><br />
+
+              <label for="topic">Topic</label><br />
+              <select id="topic" name="topic">
+                <option>General</option>
+                <option>Support</option>
+                <option>Other</option> </select
+              ><br />
+
+              <label for="msg">Message</label><br />
+              <textarea id="msg" name="msg" rows="5" placeholder="Write here…"></textarea><br />
+
+              <button type="submit">Primary Button</button>
+              <input type="reset" value="Reset" />
+              <button type="button" disabled>Disabled</button>
+            </fieldset>
+          </form>
+        </section>
+
+        <hr />
+
+        <section id="details">
+          <h2>Details / Summary</h2>
+          <details>
+              <summary>Click to expand</summary>
+              <p>This is inside a <code>&lt;details&gt;</code> element. It should have adjusted padding and border per your styles.</p>
+          </details>
+        </section>
+
+        <hr />
+
+        <section id="media">
+          <h2>Images</h2>
+          <p>Images should be responsive:</p>
+          <img src="https://picsum.photos/900/400" width="900" height="400" alt="Sample placeholder image" />
+          <p><small>(Replace external image with a local one if you prefer.)</small></p>
+        </section>
+      </article>
+      
+     {% include "components/footer.njk" %}
+    </main>
+    
+  </body>
+</html>

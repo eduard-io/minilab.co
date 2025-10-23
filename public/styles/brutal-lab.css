@@ -1,0 +1,311 @@
+/* brutal-lab.css — “visible materials” (with variable type scale) */
+:root{
+  --color-background: #fffffb;
+  --color-header: #333;
+  --color-text: #505050; /* #1f262b; */
+  --color-text-inverted: #ffffff; 
+  --color-text--muted: #6b7280;
+  --color-border: color-mix(in srgb, var(--color-text) 20%, transparent); /*#d1d5db;*/
+  /* --color-link: #0a58ff; */
+  --color-accent: #0ea5e9;
+  --color-highlight: rgba(251, 255, 122, 0.776);
+  --color-link: #0070f3;
+  --color-link-hover: #0366d6;
+  --color-link-visited: #551a8b; /* TODO: think if to keep and update :visited */
+  
+  /* TODO: use focus specific variables */
+  /* --focus-color: var(--color-link, #0000ee);
+  --focus-bg: var(--color-link, #0000ee);
+  --focus-fg: var(--color-background, #fffffb);
+  --focus-w: 2px;
+  --focus-r: 3px; */
+  
+  /* TODO: Dark mode! */
+
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* TYPE SYSTEM */
+  --base-size: 16px;     /* main text size and base for everything */
+  --lh: 1.6;             /* body line-height */
+  --scale: 1.125;        /* Major Second — change this to re-scale everything */
+
+  /* Steps built from the scale (p = step 0) */
+  --step-0: 1rem;                                 /* p (1.000rem) */
+  --step-1: calc(var(--step-0) * var(--scale));   /* 1.125rem (≈ h6) */
+  --step-2: calc(var(--step-1) * var(--scale));   /* 1.266rem (≈ h5) */
+  --step-3: calc(var(--step-2) * var(--scale));   /* 1.424rem (≈ h4) */
+  --step-4: calc(var(--step-3) * var(--scale));   /* 1.602rem (≈ h3) */
+  --step-5: calc(var(--step-4) * var(--scale));   /* 1.802rem (≈ h2) */
+  --step-6: calc(var(--step-5) * var(--scale));   /* 2.027rem (≈ h1) */
+
+  --step--1: calc(var(--step-0) / var(--scale));              /* 0.889rem (small) */
+  --step--2: calc(var(--step--1) / var(--scale));             /* 0.790rem (x-small) */
+
+  --maxw: 72ch;          /* readable line length */
+  --space: 1rem;         /* spacing unit */
+  
+  --focus-radius: 3px; 
+}
+/* TODO Dark mode */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c0e10;
+    --ink: #e5e7eb;
+  }
+} */
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  /* Set background color for selected text */
+  background: var(--color-highlight);
+  /* color: var(--color-accent-text); */
+}
+
+/* Keep a tiny bit of responsiveness, but base = 16px */
+html { 
+	font-size: clamp(16px, 1vw + 14px, 18px); 
+	/* Set body font family and some finicky elements */
+    /* font-family: var(--nc-font-sans);     */
+	/* -webkit-font-smoothing: antialiased; */
+	/* -moz-osx-font-smoothing: grayscale; */ /* Firefox on macOS */
+	/* text-rendering: optimizeLegibility; */ /* Optional, helps kerning */
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--step-0);          /* 1rem @ 16px */
+  line-height: var(--lh);
+  font-weight: 400;                  /* from screenshot */
+  text-rendering: optimizeLegibility;
+}
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+
+/* Headings -> exact steps from the scale */
+h1,h2,h3,h4,h5,h6 {
+	margin: 2.25rem 0 .5rem;
+	line-height: 1.15;
+	font-weight: 700; 
+	letter-spacing: -0.022em;
+	color: var(--color-header);
+}
+
+h1 { font-size: var(--step-6); }  /* ≈ 2.027rem */
+h2 { font-size: var(--step-5); }  /* ≈ 1.802rem */
+h3 { font-size: var(--step-4); }  /* ≈ 1.602rem */
+h4 { font-size: var(--step-3); }  /* ≈ 1.424rem */
+h5 { font-size: var(--step-2); }  /* ≈ 1.266rem */
+h6 { font-size: var(--step-1); }  /* ≈ 1.125rem */
+
+/* Body text + helpers */
+p,ul,ol,pre,table,blockquote,figure { margin: 1rem 0 1rem; }
+p { font-size: var(--step-0); }
+.small, small { font-size: var(--step--1); }
+.x-small { font-size: var(--step--2); }
+
+/* Lists */
+ul,ol { padding-left: 1.25rem; }
+li + li { margin-top: .25rem; }
+
+/* Nested lists */
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+	margin-top: .25rem;
+    margin-bottom: 0;
+}
+
+/* Definitions */
+dl {
+	margin-bottom: 1.5rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd::before {
+  /* Add an arrow to data table definitions */
+  content: '→ ';
+}
+
+/* Meta/path line */
+.page-header { margin-bottom: 2rem; }
+.page-header .sigil,
+.meta-path {
+  display: block;
+  font: 400 var(--step--1)/1 var(--font-mono);   /* small mono */
+  color: var(--color-text--muted);
+  letter-spacing: .01em;
+  margin-bottom: .5rem;
+  white-space: nowrap;
+}
+
+/* Footer */
+.page-footer, .page-footer p { 
+	margin-bottom: 2rem; 
+	font: 400 var(--step--2)/1 var(--font-mono);   /* small mono */  
+    color: var(--color-text--muted);
+    letter-spacing: .01em;
+    margin-bottom: .5rem;
+    white-space: nowrap;
+}
+
+footer {
+  font-size: var(--step--1);
+  color: var(--muted);
+  text-align: left;
+  margin-top: 3rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 1rem;
+}
+
+
+
+/* Honest links: underline always, subtle hover */
+a {
+  color: var(--color-link);
+  text-decoration-thickness: .08em;
+  text-underline-offset: .15em; 
+  
+  /*padding-inline: 2px;*/             /* baseline so focus doesn't shift layout */
+  border-radius: var(--focus-radius, 3px);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-link-hover); 
+  text-underline-offset: .22em;
+}
+
+a, button, input, textarea, select {
+  transition: background-color 0.1s ease, color 0.1s ease, outline-offset 0.1s ease;
+}
+
+/* Universal accessible focus state */
+:focus-visible{
+  outline: 2px solid var(--color-link);
+  outline-offset: 0;
+  background-color: var(--color-link);
+  color: var(--color-text-inverted);
+  border-radius: var(--focus-radius);
+  border-color: var(--color-link);
+}
+
+/* Keep links readable in focus */
+a:focus-visible {
+  color: var(--color-text-inverted);
+  text-decoration: none;  /* cleaner contrast inside blue */
+  /*padding-inline: 2px;*/ /* TODO: think if keep or not, moves stuff...*/
+}
+
+/* Optional: restore underline after focus leaves */
+a:not(:focus-visible) {
+  text-decoration: underline;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  background-color: var(--color-link);
+  color: var(--color-text-inverted);
+  border: 2px solid var(--color-link);
+  outline: none;
+}
+
+/* Show target in url, ie example.com/#target */
+:target {
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
+  scroll-margin-top: 2rem;
+}
+
+/* Hide the default focus if it's mouse/touch */
+:focus:not(:focus-visible) { outline: none; }
+
+/* Safari fallback (older versions): give something, but lighter */
+@supports not selector(:focus-visible) {
+  :focus { outline: 2px solid var(--color-link, #0000ee); }
+}
+
+/* a:visited {
+  color: var(--color-link); 
+} */
+
+/* Seams */
+hr { 
+  border: 0;
+  border-top: 1px solid var(--color-border); 
+  margin: 2rem 0;
+}
+
+
+/* Code feels native but tidy */
+code, pre, kbd, samp { font-family: var(--font-mono); }
+pre {
+  padding: .75rem;
+  border: 1px solid var(--color-border);
+  background: #f7f7f3;
+  overflow-x: auto;
+}
+
+/* Blockquote with a left rebar */
+blockquote {
+  padding-left: .9rem;
+  border-left: 3px solid var(--color-border);
+  color: var(--color-text--muted);
+}
+
+/* Tables: naked but aligned */
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: .5rem .25rem; border-bottom: 1px solid var(--color-border); text-align: left; }
+thead th { font-weight: 700; border-bottom-width: 2px; }
+
+/* Images: no frames, just space and captions */
+img { max-width: 100%; height: auto; display: block; margin: 1rem 0; }
+figcaption { color: var(--color-text--muted); font-size: var(--step--1); margin-top: .25rem; }
+
+/* Forms: native look, only spacing and readable sizes */
+input, textarea, select, button {
+  font: inherit; color: inherit; background: #fff;
+  border: 1px solid var(--color-border); padding: .5rem .6rem;
+}
+button { cursor: pointer; }
+input:focus, textarea:focus, select:focus, button:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Forms */
+fieldset {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 2rem 2rem 2rem;
+  /* border: 1px solid var(--color-border); */ /* TODO:*/
+  border-radius: 4px;
+}
+
+/* Footnotes / meta */
+.meta { color: var(--color-text--muted); font-size: var(--step--1); }
+
+/* Dark mode keeps the same structure */
+@media (prefers-color-scheme: dark) {
+  :root{
+	--color-background:#0c0e10; --color-text:#e5e7eb; --color-text--muted:#9aa0a6; --color-border:#2a2f36;
+	--color-link:#8ab4ff; --color-link-visited:#c792ea; --color-accent:#22d3ee;
+  }
+  pre { background:#0f1317; border-color: var(--color-border); }
+}
