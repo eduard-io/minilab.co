@@ -1,5 +1,15 @@
 <header class="page-header">
-  <p class="meta-path"><a href="/">minilab.co</a>{{ page.url }}</p>
-  <!-- <small class="sigil">minilab:~{{ page.url | default('/') }} $</small> -->
-  <!-- TODO: links for sections -->
+    <p class="meta-path">
+      <a href="/">minilab.co</a>
+      {%- set segments = page.url | trim('/') | split('/') -%}
+          {%- set path = "" -%} 
+          {%- for segment in segments %}
+            {%- set path = path + '/' + segment -%}          
+            /{%- if not loop.last -%}<a href="{{ path }}/">{{ segment }}</a>{%- else -%}{{ segment }}{%- endif -%}
+          {%- endfor %}
+    </p>
+
+
+	<!-- <small class="sigil">minilab:~{{ page.url | default('/') }} $</small> -->
+	<!-- TODO: links for sections -->
 </header>
