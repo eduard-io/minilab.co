@@ -24,7 +24,8 @@
     
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    <link rel="stylesheet" href="/styles/newnew.css" />
+    <!-- <link rel="stylesheet" href="/styles/newnew.css" /> -->
+    <link rel="stylesheet" href="/styles/brutal-lab.css" />
     
     {# Analytics #}
     {% if env.CONTEXT == "production" %}
@@ -38,24 +39,15 @@
   </head>
 
   <body>
-    <header class="site-header">
-      <p class="brand"><a href="/">minilab.co</a></p>
-      
-      <nav class="main-navigation">
-        <a href="/now/" class="now">Now</a> • <a href="/colophon/" class="colophon">Colophon</a> • <a href="/changelog/" class="changelog">Changelog</a>
-      </nav>
-    </header>
-
-    <main>
-      <article>
+    <main class="wrap">
+      {% include "components/header.njk" %}
+  
+      <article class="content">
+        {% if title %}<h1 class="page-title">{{ title }}</h1>{% endif %}
         {{ content | safe }}
       </article>
+  
+      {% include "components/footer.njk" %}
     </main>
-
-    <footer class="site-footer">
-      <p>&copy; 2025 <a class="logo" href="/">minilab.co</a>. All rights reserved.</p>
-      <p>Last updated on <a href="/changelog" class="changelog">October 2025</a></p>
-    </footer>
-    <div class="end-gap" aria-hidden="true"></div>
   </body>
 </html>
