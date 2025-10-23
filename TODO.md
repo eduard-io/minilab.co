@@ -8,7 +8,8 @@
 	- [ ] Nice A
 	- [ ] Improvement: islands for header & footer
 	- [ ] More advanced typography
-
+	- [ ] Make the specien a project page under minilab
+	
 ## Next
 - [ ] Setup `/eduard/blog` or `/eduard/notes` 
 	- [ ] Layout
