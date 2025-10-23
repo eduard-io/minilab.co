@@ -1,5 +1,4 @@
 ---
-title: Welcome to the minilab
 ---
 
 <img src="/images/minilab.png" alt="Minilab logo" width="120" style="margin-bottom: 1rem;">
@@ -10,7 +9,7 @@ An independent initiative for small services, experiments, and ideas.
 
 Run by <a href="/eduard" class="eduard">Eduard Giménez</a>. the only member, for now.
 
-The lab is never finished 🚧.
+The lab is never finished.
 
 ### Explore the lab
 

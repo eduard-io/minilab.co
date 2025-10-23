@@ -2,8 +2,6 @@
 title: Now
 ---
 
-# Now
-
 This is what I’m focused on right now. It changes as life does.
 
 *Updated on October 17th, 2025 from Madrid, Spain.*
