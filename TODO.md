@@ -2,8 +2,12 @@
 
 ## Now
 - [ ] Fix/remove link animation on mobile devices
-- [ ] Improvement: islands for header & footer
 - [ ] Remove `layouts/eduard.njk` if no longer required. Use eduard.json to set the proper header component?
+- [/] Brutal.lab
+	- [ ] Buttons
+	- [ ] Nice A
+	- [ ] Improvement: islands for header & footer
+	- [ ] More advanced typography
 
 ## Next
 - [ ] Setup `/eduard/blog` or `/eduard/notes` 
