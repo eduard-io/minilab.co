@@ -2,12 +2,14 @@
 
 ## Now
 - [ ] Fix/remove link animation on mobile devices
-- [ ] Fix: images not responsive, see `/specimen`
-- [ ] Improvement: header & footer are too wide.
+- [ ] Improvement: islands for header & footer
+- [ ] Remove `layouts/eduard.njk` if no longer required. Use eduard.json to set the proper header component?
 
 ## Next
 - [ ] Setup `/eduard/blog` or `/eduard/notes` 
+	- [ ] Layout
 - [ ] Design: Review font alternative font: PP Mori
+- [ ] In homepage, we can make the "Explore lab" and "Members" a two column layout to make it more interesting
 
 ## Later / Ideas
 - [ ] CMS evaluation: Decap vs [Sveltia](https://github.com/sveltia/sveltia-cms)
@@ -15,6 +17,7 @@
 - [ ] Review [Latex.css](https://latex.vercel.app/#class-based-elements)
 - [ ] Add a section about the music I'm listening inspired by [Album Whale](https://albumwhale.com/)
 - [ ] Check [typebase](https://devinhunt.github.io/typebase.css/)
+- [ ] Explore [pico.css](https://picocss.com/docs/typography) and a [small guide](https://journa11ty.pages.dev/docs/)
 
 ## Content
 - [ ] [Ten Pointless Facts About Me](https://kevquirk.com/blog/ten-pointless-facts-about-me/)
@@ -26,3 +29,4 @@
 - Review CSS styles
 - Add first user
 - Add a CSS specimen to showcase how things look.
+- Fix: images not responsive, see `/specimen`
