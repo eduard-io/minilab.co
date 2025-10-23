@@ -4,6 +4,9 @@ title: Changelog
 
 # Changelog
 
+### October..
+- New aesthetic approach based on brutalism
+
 ### October 21st, 2025
 - Add a [CSS Specimen](/specimen) to easily check and fix the style
 
