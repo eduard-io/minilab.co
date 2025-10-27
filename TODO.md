@@ -14,6 +14,7 @@
 		- another not as nice approach: http://etatunnit.taiteilijat.fi/index.html
 		- tint' https://github.com/eddelbuettel/tint/blob/master/inst/rmarkdown/templates/tintHtml/resources/tint.css
 	- [ ] margin notes: https://ninazumel.com/blog/2024-09-07-marginnotes-on-my-blog/
+	- [ ] another good ref: https://blot.im/questions/1449
 	
 ## Next
 - [ ] Setup `/eduard/blog` or `/eduard/notes` 
