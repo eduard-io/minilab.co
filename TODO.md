@@ -6,9 +6,14 @@
 - [/] Brutal.lab
 	- [ ] Buttons
 	- [ ] Nice A
-	- [ ] Improvement: islands for header & footer
+	- [ ] Improvement: islands for header & footer and content
 	- [ ] More advanced typography
 	- [ ] Make the specien a project page under minilab
+	- [ ] Re explore using typograhy [tuftecss](www.aranke.org) + layout from [latex.css](https://latex.vercel.app)
+	- [ ] I really like the topheader from here: https://tilde.club/~joeld/secretary/posts/01-homes.html 
+		- another not as nice approach: http://etatunnit.taiteilijat.fi/index.html
+		- tint' https://github.com/eddelbuettel/tint/blob/master/inst/rmarkdown/templates/tintHtml/resources/tint.css
+	- [ ] margin notes: https://ninazumel.com/blog/2024-09-07-marginnotes-on-my-blog/
 	
 ## Next
 - [ ] Setup `/eduard/blog` or `/eduard/notes` 
