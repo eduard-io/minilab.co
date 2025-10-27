@@ -1,27 +1,34 @@
 # TODO
 
 ## Now
+
 - [ ] Fix/remove link animation on mobile devices
 - [ ] Remove `layouts/eduard.njk` if no longer required. Use eduard.json to set the proper header component?
 - [/] Brutal.lab
-	- [ ] Buttons
-	- [ ] Nice A
-	- [ ] Improvement: islands for header & footer and content
-	- [ ] More advanced typography
-	- [ ] Make the specien a project page under minilab
-	- [ ] Re explore using typograhy [tuftecss](www.aranke.org) + layout from [latex.css](https://latex.vercel.app)
-	- [ ] I really like the topheader from here: https://tilde.club/~joeld/secretary/posts/01-homes.html 
-		- another not as nice approach: http://etatunnit.taiteilijat.fi/index.html
-		- tint' https://github.com/eddelbuettel/tint/blob/master/inst/rmarkdown/templates/tintHtml/resources/tint.css
-	- [ ] margin notes: https://ninazumel.com/blog/2024-09-07-marginnotes-on-my-blog/
-	
-## Next
-- [ ] Setup `/eduard/blog` or `/eduard/notes` 
-	- [ ] Layout
+  - [ ] Buttons
+  - [ ] Nice A
+  - [ ] Improvement: islands for header & footer and content
+  - [ ] More advanced typography
+    - [ ] Get typographic base from [tufte.css](https://edwardtufte.github.io/tufte-css/)
+  - [ ] Make the specien a project page under minilab
+  - [ ] Re explore using typograhy [tuftecss](www.aranke.org) + layout from [latex.css](https://latex.vercel.app)
+  - [ ] I really like the topheader from here: https://tilde.club/~joeld/secretary/posts/01-homes.html
+    - another not as nice approach: http://etatunnit.taiteilijat.fi/index.html
+    - tint' https://github.com/eddelbuettel/tint/blob/master/inst/rmarkdown/templates/tintHtml/resources/tint.css
+  - [ ] margin notes: https://ninazumel.com/blog/2024-09-07-marginnotes-on-my-blog/
+  - [ ] another good ref: https://blot.im/questions/1449
 - [ ] Design: Review font alternative font: PP Mori
+- Ref: https://justfuckingusehtml.com
+
+## Next
+
+- [ ] Setup `/eduard/blog` or `/eduard/notes`
+  - [ ] Layout
 - [ ] In homepage, we can make the "Explore lab" and "Members" a two column layout to make it more interesting
+- [ ] Setup a contact form: https://tally.so/pricing or just netlify stuff?
 
 ## Later / Ideas
+
 - [ ] CMS evaluation: Decap vs [Sveltia](https://github.com/sveltia/sveltia-cms)
 - [ ] Generate [`sitemap.xml` automatically](https://github.com/11ty/eleventy/issues/248)
 - [ ] Review [Latex.css](https://latex.vercel.app/#class-based-elements)
@@ -30,10 +37,13 @@
 - [ ] Explore [pico.css](https://picocss.com/docs/typography) and a [small guide](https://journa11ty.pages.dev/docs/)
 
 ## Content
+
 - [ ] [Ten Pointless Facts About Me](https://kevquirk.com/blog/ten-pointless-facts-about-me/)
 
 ## Done
+
 <!-- This items will need to be moved to CHANGELOG.md -->
+
 - Layout: Add header
 - Layout: Add footer
 - Review CSS styles
