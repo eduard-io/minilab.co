@@ -1,23 +1,27 @@
 ---
+title: minilab.co
 ---
 
-<img src="/images/minilab.png" alt="Minilab logo" width="120" style="margin-bottom: 1rem;">
+minilab is my personal corner of the internet. A space to run experiments, build ideas, and stay independent from big tech platforms. For now it's mostly a playground, but the goal is to grow it into something useful, maybe even for others too. No grand plan, just a place to own what I make.
 
-# Welcome to the minilab
-
-An independent initiative for small services, experiments, and ideas.
-
-Run by <a href="/eduard" class="eduard">Eduard Giménez</a>. the only member, for now.
-
-The lab is never finished.
+🚧 The lab is never finished.
 
 ### Explore the lab
 
-- [Home](/): _you're here._
-- <a href="/now" class="now">Now</a>: what's happening now in the minilab
-- <a href="/colophon" class="colophon">Colophon</a>: information of how the minilab is built
-- <a href="/changelog" class="changelog">Changelog</a>: record of changes
+<dl>
+	<dt><a href="/">Home</a></dt>
+	<dd><em>you're here.</em></dd>
+	<dt><a href="/now" class="now">Now</a></dt>
+	<dd>what's happening now in the minilab</dd>
+	<dt><a href="/colophon">Colophon</a></dt>
+	<dd>information of how the minilab is built</dd>
+	<dt><a href="/changelog">Changelog</a></dt>
+	<dd>record of changes</dd>
+</dl>
 
-### Lab members
+### People
 
-- <a href="/eduard" class="eduard">Eduard</a>: record of changes 
+<dl>
+	<dt><a href="/eduard">Eduard</a></dt>
+	<dd>Only person here ATM</dd>
+</dl>
