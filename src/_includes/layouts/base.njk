@@ -5,27 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       {% if title %}
-        {{ title }} - minilab.co
+        {{ title }}
+        - minilab.co
       {% else %}
         minilab.co
       {% endif %}
     </title>
-    
+
     <link rel="canonical" href="https://minilab.co" />
     <meta name="robots" content="index,follow" />
-    
-    <meta name="description" content="A tiny lab on the internet. An independent initiative for small services, experiments, and ideas. Run by Eduard Giménez." />
-    <meta name="keywords" content="minimalist website, personal publishing, digital garden, indie web, static site, eleventy, creative lab, personal blog, microblog, family website, digital home, minilab, eduard gimenez" />
+
+    <meta
+      name="description"
+      content="A tiny lab on the internet. An independent initiative for small services, experiments, and ideas. Run by Eduard Giménez."
+    />
+    <meta
+      name="keywords"
+      content="minimalist website, personal publishing, digital garden, indie web, static site, eleventy, creative lab, personal blog, microblog, family website, digital home, minilab, eduard gimenez"
+    />
     <meta name="author" content="minilab.co" />
-    
+
     <meta name="theme-color" content="#f6f8fa" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#202021" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
-    
+
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    <link rel="stylesheet" href="/styles/newnew.css" />
-    
+    <!-- <link rel="stylesheet" href="/styles/newnew.css" /> -->
+    <link rel="stylesheet" href="/styles/brutal-lab.css" />
+
     {# Analytics #}
     {% if env.CONTEXT == "production" %}
       <link rel="preconnect" href="https://cloud.umami.is" />
@@ -38,24 +46,15 @@
   </head>
 
   <body>
-    <header class="site-header">
-      <p class="brand"><a href="/">minilab.co</a></p>
-      
-      <nav class="main-navigation">
-        <a href="/now/" class="now">Now</a> • <a href="/colophon/" class="colophon">Colophon</a> • <a href="/changelog/" class="changelog">Changelog</a>
-      </nav>
-    </header>
+    <main class="wrap">
+      {% include "components/header.njk" %}
 
-    <main>
-      <article>
+      <article class="content">
+        {% if title %}<h1 class="page-title">{{ title }}</h1>{% endif %}
         {{ content | safe }}
       </article>
-    </main>
 
-    <footer class="site-footer">
-      <p>&copy; 2025 <a class="logo" href="/">minilab.co</a>. All rights reserved.</p>
-      <p>Last updated on <a href="/changelog" class="changelog">October 2025</a></p>
-    </footer>
-    <div class="end-gap" aria-hidden="true"></div>
+      {% include "components/footer.njk" %}
+    </main>
   </body>
 </html>

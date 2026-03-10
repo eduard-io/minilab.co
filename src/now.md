@@ -2,8 +2,4 @@
 title: Now
 ---
 
-# Now
-
-Updated October 16th, 2025. I registered this domain a few months ago, added a
-placeholder and forgot about it. Yesterday I started to work on this again to
-make it cozy.
+Updated March 10th, new look'n'fell with [brutal-lab.css](/styles/brutal-lab.css),.

@@ -2,17 +2,20 @@
 title: Changelog
 ---
 
-# Changelog
+### March 10th, 2026.
+
+- Went absolutely minimal, no styles.
 
 ### October 21st, 2025
+
 - Add a [CSS Specimen](/specimen) to easily check and fix the style
 
 ### October 17th, 2025
 
 - Add sitemap, robots, and clean up layout structure
-- Add [/eduard](/eduard) and [/eduard/now](/eduard/now), including its own 
-layout
-- Small header improvements 
+- Add [/eduard](/eduard) and [/eduard/now](/eduard/now), including its own
+  layout
+- Small header improvements
 - Update the layout & fun links
 
 ### October 16th, 2025
